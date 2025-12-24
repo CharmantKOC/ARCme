@@ -111,9 +111,9 @@ const Auth = () => {
           }
         } else {
           toast({
-            title: '📧 Vérifiez votre email',
-            description: 'Un email de confirmation a été envoyé à votre adresse. Cliquez sur le lien pour activer votre compte.',
-            duration: 8000,
+            title: 'Compte créé avec succès',
+            description: 'Vous pouvez maintenant vous connecter avec vos identifiants.',
+            duration: 5000,
           });
           // Basculer vers le mode connexion après inscription
           setTimeout(() => {
