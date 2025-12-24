@@ -119,6 +119,9 @@ const Auth = () => {
           setTimeout(() => {
             setIsLogin(true);
             setPassword('');
+            setFirstName('');
+            setLastName('');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
           }, 2000);
         }
       }
