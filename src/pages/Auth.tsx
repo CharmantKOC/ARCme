@@ -116,7 +116,9 @@ const Auth = () => {
             duration: 5000,
           });
           // Basculer vers le mode connexion après inscription
+          console.log('🔄 Basculement vers connexion dans 2s...');
           setTimeout(() => {
+            console.log('✅ Basculement effectué');
             setIsLogin(true);
             setPassword('');
             setFirstName('');
