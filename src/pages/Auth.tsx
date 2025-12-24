@@ -111,9 +111,15 @@ const Auth = () => {
           }
         } else {
           toast({
-            title: 'Compte créé',
-            description: 'Votre compte a été créé avec succès !',
+            title: '📧 Vérifiez votre email',
+            description: 'Un email de confirmation a été envoyé à votre adresse. Cliquez sur le lien pour activer votre compte.',
+            duration: 8000,
           });
+          // Basculer vers le mode connexion après inscription
+          setTimeout(() => {
+            setIsLogin(true);
+            setPassword('');
+          }, 2000);
         }
       }
     } finally {

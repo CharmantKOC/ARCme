@@ -47,7 +47,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signUp = async (email: string, password: string, fullName?: string) => {
     console.log('📝 Tentative d\'inscription...', { email, fullName });
-    const redirectUrl = `${window.location.origin}/`;
+    // Utiliser l'URL de production pour la redirection email
+    const redirectUrl = window.location.hostname === 'localhost' 
+      ? `${window.location.origin}/`
+      : 'https://ar-cme.vercel.app/';
     const { data, error } = await supabase.auth.signUp({
       email,
       password,

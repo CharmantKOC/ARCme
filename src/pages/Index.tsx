@@ -54,11 +54,11 @@ const Index = () => {
       <section className="py-12 px-6 text-center">
         <div className="container mx-auto max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Ne cherchez plus, <span className="text-primary">dialoguez</span> avec le savoir
+            Gérez et explorez les <span className="text-primary">mémoires académiques</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Accédez à 10 ans de mémoires universitaires via notre assistant IA. 
-            Déposez vos travaux ou explorez les archives intelligemment.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Plateforme complète pour déposer, consulter et rechercher des mémoires universitaires. 
+            Découvrez 10 ans d'archives avec un assistant IA intelligent.
           </p>
         </div>
       </section>
