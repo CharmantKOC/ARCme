@@ -1,0 +1,47 @@
+@startuml ARC Memories - Diagramme d'Activité Global
+
+|Utilisateur|
+start
+:Accéder à la plateforme;
+
+if (Authentifié ?) then (non)
+  :S'authentifier;
+endif
+
+:Accéder au tableau de bord;
+
+repeat
+  :Choisir une action;
+  
+  if (Action = Consulter ?) then (oui)
+    :Parcourir les mémoires;
+    :Filtrer par domaine;
+    if (Télécharger ?) then (oui)
+      :Télécharger PDF;
+    endif
+  elseif (Action = Assistant IA ?) then (oui)
+    :Poser une question;
+    :Afficher les résultats;
+  elseif (Action = Ajouter ?) then (oui)
+    :Uploader le PDF;
+    :Saisir les métadonnées;
+    :Enregistrer;
+  elseif (Action = Messagerie ?) then (oui)
+    :Sélectionner un contact;
+    :Envoyer un message;
+  elseif (Action = Réseau ?) then (oui)
+    :Consulter les profils;
+    :Filtrer par domaine;
+  else (Profil)
+    :Modifier les informations;
+    :Changer l'avatar;
+  endif
+
+repeat while (Continuer ?) is (oui)
+->non;
+
+:Se déconnecter;
+
+stop
+
+@enduml

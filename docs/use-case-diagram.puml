@@ -1,0 +1,32 @@
+@startuml ARC Memories - Diagramme de Cas d'Utilisation
+
+left to right direction
+
+actor Utilisateur
+
+rectangle "ARC Memories" {
+  
+  usecase "S'authentifier" as UC1
+  usecase "Gérer son profil" as UC2
+  usecase "Consulter les mémoires" as UC3
+  usecase "Rechercher un mémoire" as UC4
+  usecase "Ajouter un mémoire" as UC5
+  usecase "Télécharger un PDF" as UC6
+  usecase "Utiliser l'assistant IA" as UC7
+  usecase "Envoyer des messages" as UC8
+  usecase "Consulter le réseau Alumni" as UC9
+  usecase "Gérer les paramètres" as UC10
+}
+
+Utilisateur -- UC1
+Utilisateur -- UC2
+Utilisateur -- UC3
+Utilisateur -- UC4
+Utilisateur -- UC5
+Utilisateur -- UC6
+Utilisateur -- UC7
+Utilisateur -- UC8
+Utilisateur -- UC9
+Utilisateur -- UC10
+
+@enduml
