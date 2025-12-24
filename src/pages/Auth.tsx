@@ -30,7 +30,7 @@ const Auth = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ firstName?: string; lastName?: string; email?: string; password?: string }>({});
   
-  const { user, signIn, signUp, loading } = useAuth();
+  const { user, signIn, signUp, signOut, loading } = useAuth();
   const { toast } = useToast();
   const location = useLocation();
 
@@ -110,6 +110,8 @@ const Auth = () => {
             });
           }
         } else {
+          // Déconnecter l'utilisateur pour qu'il se connecte manuellement
+          await signOut();
           toast({
             title: 'Compte créé avec succès',
             description: 'Vous pouvez maintenant vous connecter avec vos identifiants.',
